@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b69898;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.boton {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #fff;
+  color: #0e0e0e;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.profile {
+  max-width: 400px;
+  text-align: center;
+  margin: 50px;
+}
+
+.profile img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px;
+}
+.icono {
+  width: 30px;
+  height: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .buttons-container {
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos en pantallas más pequeñas */
+  }
+
+  .boton {
+    margin: 10px; /* Agrega un margen uniforme entre los botones */
+  }
+
+  .profile {
+    margin: 20px auto; /* Centra el perfil en pantallas más pequeñas */
+  }
+}

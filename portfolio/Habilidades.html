@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi página web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/habilidades.css">
+</head>
+
+<body>
+    <header class="contenido">
+        <div class="textoCircular">
+            <div class="textoCircular">
+                <h1>Habilidades</h1>
+            </div>
+        </div>
+    </header>
+    <div class="columna">
+        <a href="Main.html" class="boton">Datos personales</a>
+        <a href="Formacion.html" class="boton">Formación</a>
+        <a href="ExperienciaLaboral.html" class="boton">Experiencia laboral</a>
+        <a href="Estudios.html" class="boton">Estudios</a>
+        <a href="Habilidades.html" class="boton">Habilidades</a>
+        <a href="idiomas.html" class="boton">Idiomas</a>
+    </div>
+
+    <div class="contenido2">
+        <div class="columna">
+            <div id="marco2">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="slide">
+                            <img src="./imagenes/java.jpg" alt="Tecnología 1">
+                            <div class="carousel-caption">
+                                <h5>Java</h5>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="./imagenes/javascript.png" alt="Tecnología 2">
+                            <div class="carousel-caption">
+                                <h5>javaScript</h5>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="./imagenes/react.jpg" alt="Tecnología 3">
+                            <div class="carousel-caption">
+                                <h5>React</h5>
+                            </div>
+                        </div>
+                            <div class="slide">
+                                <img src="./imagenes/database.jpg" class="d-block w-100" alt="Tecnología 4">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>base de datos</h5>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="./imagenes/mongo.png" class="d-block w-100" alt="Tecnología 5">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>mongodb</h5>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="./imagenes/backend.png" class="d-block w-100" alt="Tecnología 6">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>back-end</h5>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="./imagenes/html.png" class="d-block w-100" alt="Tecnología 7">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>html</h5>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="./imagenes/css.png" class="d-block w-100" alt="Tecnología 8">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>CSS</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button id="prevBtn">Anterior</button>
+                        <button id="nextBtn">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://twitter.com/home?lang=es"><img class="icono" src="twiter.png" alt="Twitter"></a>
+        <a href="https://es-es.facebook.com/"><img class="icono" src="facebok.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img class="icono" src="instagram.png" alt="Instagram"></a>
+    </footer>
+    <script>
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const carousel = document.querySelector(".carousel");
+    
+        let currentIndex = 0;
+    
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+            updateCarousel();
+        });
+    
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % carousel.children.length;
+            updateCarousel();
+        });
+    
+        function updateCarousel() {
+            const slides = carousel.querySelectorAll(".slide");
+            slides.forEach((slide, index) => {
+                if (index === currentIndex) {
+                    slide.style.display = "block";
+                } else {
+                    slide.style.display = "none";
+                }
+            });
+        }
+    
+        updateCarousel(); // Mostrar la primera imagen al cargar la página
+    </script>
+</body>
+
+</html>

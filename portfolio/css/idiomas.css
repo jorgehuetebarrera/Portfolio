@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b69898;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.boton {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #fff;
+    color: #0e0e0e;
+}
+
+.columna {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contenido2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.columna2 {
+    max-width: 800px;
+    text-align: center;
+    margin: 50px;
+}
+
+.flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flags img {
+    width: 100px;
+    margin: 0 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+/* Reglas de medios para diseño responsive */
+@media only screen and (max-width: 768px) {
+    .columna2 {
+        margin: 20px;
+    }
+
+    .flags img {
+        width: 60px;
+        margin: 0 5px;
+        flex-wrap: wrap-reverse ;
+    }
+    .columna {
+        flex-wrap: wrap;
+      }
+    
+      .boton {
+        margin: 10px 0;
+      }
+}

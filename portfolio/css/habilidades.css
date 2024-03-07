@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenido {
+    text-align: center;
+    padding: 20px;
+}
+
+.columna {
+    display: flex;
+    align-self: center;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #fff;
+    color: #0e0e0e;
+}
+
+.contenido2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 400px; /* Cambié el ancho para que se ajuste al contenedor */
+    height: 400px; /* Altura automática para mantener la proporción */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+}
+
+/* Ajustes para los botones de navegación */
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #b69898;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 0px;
+}
+
+#nextBtn {
+    right: 0px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+    border-right: #fff;
+}
+
+.menu ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 2px solid #fff; /* Centra los elementos horizontalmente */
+}
+
+.menu ul li a:hover {
+    background-color: #fff;
+    color: #0e0e0e;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+.icono {
+    width: 30px;
+    height: 30px;
+}
+/* Reglas de medios para diseño responsive */
+@media only screen and (max-width: 768px) {
+    .columna2 {
+        margin: 30px;
+    }
+
+    .columna {
+        flex-wrap: wrap;
+      }
+    
+      .boton {
+        margin: 10px 0;
+      }
+}
